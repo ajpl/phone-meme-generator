@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+<div class="container">
+<div class="jumbotron">
+  <h1 class="display-4">Phone Meme Generator!</h1>
+  <p class="lead">Choose a name for the caller ID and let the fun begin.</p>
+</div>
+  <hr>
+    {{ wtf.quick_form(form, button_map={'submit': 'primary'}) }}
+  <hr>
+</div>
+{% endblock %}
