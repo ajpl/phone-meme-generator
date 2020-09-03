@@ -14,6 +14,6 @@ python main.py
 ### Production
 Make sure the Docker daemon is running on your machine, then simply run:
 ```
-docker pull ajpl/phone-meme-generator
-docker run --rm -p 80:80 ajpl/phone-meme-generator
+docker pull ghcr.io/ajpl/phone-meme-generator
+docker run --rm -p 80:80 ghcr.io/ajpl/phone-meme-generator
 ```
