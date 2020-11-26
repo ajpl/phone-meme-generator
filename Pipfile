@@ -11,6 +11,11 @@ flask-bootstrap = "*"
 flask-wtf = "*"
 
 [dev-packages]
+black = "*"
+flake8 = "*"
 
 [requires]
 python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true
