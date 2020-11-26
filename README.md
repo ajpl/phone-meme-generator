@@ -6,9 +6,9 @@ Generate phone call memes on the spot !
 
 ### Development
 ```
-pip install -r requirements.txt
-cd app
-python main.py
+pip install pipenv
+pipenv sync
+python app/app/main.py
 ```
 
 ### Production
