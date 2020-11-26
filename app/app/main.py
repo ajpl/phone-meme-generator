@@ -6,8 +6,8 @@ from flask import (
 )
 from flask_bootstrap import Bootstrap
 
-from forms import GeneratorForm
-from utils import generate_image
+from .forms import GeneratorForm
+from .utils import generate_image
 
 
 app = Flask(__name__)

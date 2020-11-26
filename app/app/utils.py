@@ -1,3 +1,4 @@
+import pathlib
 from io import BytesIO
 
 from flask import send_file
@@ -9,8 +10,11 @@ from PIL import (
 
 
 def generate_image(caller_id):
-    img = Image.open("assets/base.png")
-    font = ImageFont.truetype("assets/arial-black.ttf", font_size(caller_id))
+    img = Image.open(f"{pathlib.Path(__file__).parent.absolute()}/assets/base.png")
+    font = ImageFont.truetype(
+        f"{pathlib.Path(__file__).parent.absolute()}/assets/arial-black.ttf",
+        font_size(caller_id),
+    )
     text = Image.new("L", (428, 349))
     draw = ImageDraw.Draw(text)
     draw.text((10, 105), caller_id, font=font, fill=255)

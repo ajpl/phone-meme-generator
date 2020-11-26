@@ -8,7 +8,7 @@ Generate phone call memes on the spot !
 ```
 pip install pipenv
 pipenv sync
-python app/app/main.py
+python -m app.app.main
 ```
 
 ### Production
