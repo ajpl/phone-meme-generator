@@ -1,9 +1,9 @@
-FROM tiangolo/uwsgi-nginx-flask:python3.8
+FROM tiangolo/meinheld-gunicorn-flask:python3.8
 
-COPY ./requirements.txt requirements.txt
+RUN pip install pipenv
 
-RUN pip install -r requirements.txt
+COPY Pipfile Pipfile.lock ./
 
-RUN echo "wsgi-disable-file-wrapper = true" >> uwsgi.ini
+RUN pipenv install --deploy --system --ignore-pipfile
 
 COPY ./app /app
