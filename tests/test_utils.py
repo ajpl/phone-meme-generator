@@ -1,6 +1,6 @@
 import pytest
 
-from app.app.utils import font_size, generate_image
+from app.app.utils import font_size
 
 
 font_test_data = [
