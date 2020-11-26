@@ -4,10 +4,10 @@ from wtforms import StringField, SubmitField, validators
 
 class GeneratorForm(FlaskForm):
     caller_id = StringField(
-        'Caller ID',
+        "Caller ID",
         validators=[
             validators.DataRequired(),
             validators.Length(max=12),
-        ]
+        ],
     )
-    submit = SubmitField('Generate')
+    submit = SubmitField("Generate")
